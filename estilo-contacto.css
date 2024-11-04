@@ -1,0 +1,217 @@
+:root {
+    --colorPrincipal: #e56cea;
+    --rosaSombra: #b77db9;
+    --fondoColorNavegador: #f3d7f4;
+    --colorLetraPrincipal: #655353;
+    --colorBordeRecuadro: #faf4f9;
+    --negro: #000000;
+    --tipografia: "Dancing Script", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 35px 0;
+    /* background-color: #e5e5f7; */
+    background-image: radial-gradient(#9a969a 0.6px, #ffffff 0.5px);
+    background-size: 20px 20px; 
+}
+
+#logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    border-radius: 15px;
+    background-color: var(--fondoColorNavegador);
+    box-shadow: 1px 1px 10px var(--rosaSombra);
+}
+
+nav ul li {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 45px;
+    margin: 15px 25px;
+}
+
+nav ul li a {
+    color: var(--colorLetraPrincipal);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--colorPrincipal);
+}
+
+main {
+    background: radial-gradient(circle, rgba(252,201,254,1) 0%, rgba(217,167,219,1) 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 75px 95px;
+}
+
+
+
+#contacto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 25px;
+}
+
+.seccionContacto { 
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 15px 0;
+}
+
+#formulario h3 {
+    color: var(--colorLetraPrincipal);
+    font-family: var(--tipografia);
+}
+
+#formulario label, #formulario input, #formulario textarea {
+    display: block;
+    width: 100%;
+    min-width: fit-content;
+    max-width: 100%;
+    padding: 10px 0;
+}
+
+#formulario label {
+    padding-top: 25px;
+    color: var(--colorLetraPrincipal);
+}
+
+#nombre, #email, #areaTexto {
+    border-radius: 10px;
+}
+
+.botonFormulario {
+    margin: 15px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--colorLetraPrincipal);
+    color: var(--colorBordeRecuadro);
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.3s;  
+}
+
+.botonFormulario:hover {
+    background-color: var(--rosaSombra);
+}
+
+
+.contenedorImagen {
+    grid-area: 1 / 3 / 2 / 5;
+    border-radius: 0 15px;
+    background-image: url(./imagenes/manicuria-arte.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px;
+    margin: 0 25px;
+    box-shadow: 0 0 5px var(--colorLetraPrincipal);
+}
+
+footer {
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 60px;
+}
+
+.seccionIconosRRSS {
+    display: flex;
+    column-gap: 25px;
+}
+
+.seccionIconosRRSS a {
+    color: var(--colorLetraPrincipal);
+}
+
+.seccionIconosRRSS a:hover {
+    color: var(--colorPrincipal);
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    nav ul li {
+        padding: 0 45px;
+        margin: 15px 0;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .seccionContacto {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+    
+    .contenedorImagen {
+        grid-area: 1 / 4 / 2 / 5;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Celular */
+@media screen and (max-width: 768px) {
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 0 125px;
+        text-align: center;
+    }
+
+
+    main {
+        padding: 10px 5px;
+    }
+    #contacto {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .seccionContacto {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+    
+    #formulario label, #formulario input, #formulario textarea {
+        display: block;
+        width: 100%;
+
+    }
+
+    .contenedorImagen {
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 0;
+        margin: 0;
+    }
+
+
+}

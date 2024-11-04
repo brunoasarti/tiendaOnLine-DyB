@@ -1,0 +1,105 @@
+:root {
+    --colorPrincipal: #e56cea;
+    --rosaSombra: #b77db9;
+    --fondoColorNavegador: #f3d7f4;
+    --colorLetraPrincipal: #655353;
+    --colorBordeRecuadro: #faf4f9;
+    --negro: #000000;
+    --tipografia: "Dancing Script", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#header-valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 35px 0;
+    /* background-color: #e5e5f7; */
+    background-image: radial-gradient(#9a969a 0.6px, #ffffff 0.5px);
+    background-size: 20px 20px; 
+}
+
+#logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    border-radius: 15px;
+    background-color: var(--fondoColorNavegador);
+    box-shadow: 1px 1px 10px var(--rosaSombra);
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+nav ul li {
+    /* text-decoration: none; */
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 45px;
+    margin: 15px 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--colorLetraPrincipal);
+
+}
+
+nav ul li a:hover {
+    color: var(--colorPrincipal);
+}
+
+#main-valores {
+    background: radial-gradient(circle, rgba(252,201,254,1) 0%, rgba(217,167,219,1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 75px 95px;
+}
+
+#main-valores h3 {
+    color: var(--colorLetraPrincipal);
+    font-family: var(--tipografia);
+    
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#main-valores .contenedor .card .btn-primary {
+    background-color: var(--colorLetraPrincipal);
+    border: none;
+}
+
+footer {
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 60px;
+}
+
+.seccionIconosRRSS {
+    display: flex;
+    column-gap: 25px;
+}
+
+.seccionIconosRRSS a {
+    color: var(--colorLetraPrincipal);
+}
+
+.seccionIconosRRSS a:hover {
+    color: var(--colorPrincipal);
+}

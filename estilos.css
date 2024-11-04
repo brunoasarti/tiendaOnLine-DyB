@@ -1,0 +1,200 @@
+:root {
+    --colorPrincipal: #e56cea;
+    --rosaSombra: #b77db9;
+    --fondoColorNavegador: #f3d7f4;
+    --colorLetraPrincipal: #655353;
+    --colorBordeRecuadro: #faf4f9;
+    --negro: #000000;
+    --tipografia: "Dancing Script", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0 35px 0;
+    /* background-color: #e5e5f7; */
+    background-image: radial-gradient(#9a969a 0.6px, #ffffff 0.5px);
+    background-size: 20px 20px; 
+}
+
+#logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    border-radius: 15px;
+    background-color: var(--fondoColorNavegador);
+    box-shadow: 1px 1px 10px var(--rosaSombra);
+}
+
+nav ul li {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 45px;
+    margin: 15px 25px;
+}
+
+nav ul li a {
+    color: var(--colorLetraPrincipal);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--colorPrincipal);
+}
+
+main {
+    background: radial-gradient(circle, rgba(252,201,254,1) 0%, rgba(217,167,219,1) 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 75px 95px;
+}
+
+#principalSeccion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 400px;
+    padding: 35px 0;
+    margin-bottom: 25px;
+}
+
+
+
+#slogan {
+    grid-area: 1 / 1  / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 45px;
+}
+
+#imagen-seccionPrincipal {
+    grid-area: 1 / 3 / 2 / 5;
+    background: url("imagenes/esmaltes-set.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 25px;
+    box-shadow: 0 0 5px 1px var(--negro);
+}
+
+#slogan h2 {
+    font-family: var(--tipografia); 
+    font-size: 5vw;
+    letter-spacing: 5px;
+    line-height: 60px;
+    color: var(--colorBordeRecuadro);
+    text-shadow: 0 0 4px #655353;
+    margin-bottom: 35px;
+}
+
+#slogan h3 {
+    /* font-size: 3vh; */
+    color: var(--colorLetraPrincipal);
+    text-shadow: 0 0 1px #655353;
+    letter-spacing: 2px;
+}
+
+#slogan p {
+    line-height: 20px;
+    margin: 15px 0;
+}
+
+
+.sloganBotones a {
+    margin-top: 60px;
+    padding-right: 25px;
+}
+
+#slogan .btnSlogan {
+    margin: 15px 0;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 0 10px;
+    background-color: var(--colorPrincipal);
+    color: var(--colorBordeRecuadro);
+    font-weight: bolder;
+    border: 1px solid var(--negro);
+    transition: 0.3s;
+}
+
+#slogan .btnSlogan:hover {
+    background-color: var(--colorLetraPrincipal);
+    color: var(--colorBordeRecuadro);
+    border: 1px solid var(--colorBordeRecuadro);
+    cursor: pointer;
+}
+
+#inicioSeccion {
+    border: 3px var(--rosaSombra) solid; 
+    border-radius: 25px;
+    padding: 55px 25px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.75);    
+}
+
+.videoCaracteristicas {
+    grid-area: 1 / 1 / 2 / 3;
+    border-radius: 15px;
+    border: 5px solid var(--colorBordeRecuadro);
+    box-shadow:  5px 5px 25px var(--rosaSombra);
+    display: inline;
+}
+
+#frase {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 3px red solid; */
+    margin: 0 25px;
+}
+
+#frase h2 {
+    font-family: var(--tipografia);
+    font-size: 3vh;
+}
+
+#imagenLateral {
+    grid-area: 1 / 4 / 2 / 5;
+    background: url(imagenes/eligeTuEsmalte.jpg) center;
+    background-size: cover;
+}
+
+
+footer {
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 60px;
+}
+
+.seccionIconosRRSS {
+    display: flex;
+    column-gap: 25px;
+}
+
+.seccionIconosRRSS a {
+    color: var(--colorLetraPrincipal);
+}
+
+.seccionIconosRRSS a:hover {
+    color: var(--colorPrincipal);
+}
