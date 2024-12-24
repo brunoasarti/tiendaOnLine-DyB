@@ -60,6 +60,12 @@ main {
     padding: 75px 95px;
 }
 
+main h1 {
+    background-color: var(--colorBordeRecuadro);
+    color: var(--rosaSombra);
+    text-align: center;
+}
+
 #principalSeccion {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

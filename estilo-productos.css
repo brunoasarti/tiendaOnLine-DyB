@@ -4,6 +4,7 @@
     --fondoColorNavegador: #f3d7f4;
     --colorLetraPrincipal: #655353;
     --colorBordeRecuadro: #faf4f9;
+    --azulCompra: #3800c6;
     --negro: #000000;
     --tipografia: "Dancing Script", cursive;
 }
@@ -66,22 +67,63 @@ nav ul li a:hover {
     padding: 75px 95px;
 }
 
-#main-valores h3 {
+#main-valores h3, #carrito h4{
     color: var(--colorLetraPrincipal);
     font-family: var(--tipografia);
     
 }
 
-.contenedor {
+#contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
 }
+#carrito h4{
+    text-align: center;
+}
 
-#main-valores .contenedor .card .btn-primary {
+#carrito {
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 40%;
+}
+
+#carrito ul li {
+    color: var(--azulCompra);
+    font-size: 14px;
+}
+
+#carrito #seccionTotal {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#carrito #seccionTotal input{
+    background-color: var(--colorBordeRecuadro);
+    border: 1px solid var(--azulCompra);
+    color: var(--azulCompra);
+    width: 40%;
+}
+
+.card .btn-primary {
     background-color: var(--colorLetraPrincipal);
     border: none;
+}
+
+.card .btn-primary:hover {
+    background-color: var(--azulCompra);
+}
+
+.card .btn-primary:active {
+    background-color: red;
+}
+
+.card .price-product {
+    font-weight: bolder;
+    text-align: right;
+    color: var(--azulCompra);
 }
 
 footer {

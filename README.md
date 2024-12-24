@@ -10,3 +10,5 @@ Se lleva a cabo cumpliendo con los siguientes requisitos:
 - Sección "Reseñas": Organizada utilizando Grid.
 - Sección "Contacto": Responsiva mediante el uso de Media Queries adaptandose a diferentes tamaños de pantalla.
 - Contenido multimedia (incluye video con subtitulos en el Inicio) y lista de navegación.
+- Carrito funcional con actualizacion en directo.
+- Etiquetas de contenido y keywords para la optimizacion de SEO.
